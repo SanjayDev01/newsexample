@@ -3,6 +3,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_overlay_loader/flutter_overlay_loader.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:newsexample/models/user.dart';
@@ -29,6 +30,7 @@ class _SignInScreenState extends State<SignInScreen> {
     super.initState();
 
     // // Detects When User Sign in
+
     googleSignIn.onCurrentUserChanged.listen((account) {
       handleSignIn(account!);
     }, onError: (err) {
@@ -43,7 +45,12 @@ class _SignInScreenState extends State<SignInScreen> {
 
   handleSignIn(GoogleSignInAccount account) async {
     if (account != null) {
+      Loader.show(
+        context,
+        progressIndicator: const CircularProgressIndicator(),
+      );
       await createUserInFireStore();
+      Loader.hide();
       Navigator.push(
           context, MaterialPageRoute(builder: (context) => HomeScreen()));
     } else {

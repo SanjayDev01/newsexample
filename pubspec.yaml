@@ -40,6 +40,8 @@ dependencies:
   google_sign_in:
   firebase_auth: 
   firebase_core:
+  flutter_overlay_loader: ^1.0.3
+
 
 
 
