@@ -41,6 +41,8 @@ dependencies:
   firebase_auth: 
   firebase_core:
   flutter_overlay_loader: ^1.0.3
+  http: 
+  cached_network_image: 
 
 
 

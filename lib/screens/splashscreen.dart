@@ -70,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontWeight: FontWeight.normal,
                   color: Colors.white30),
             ),
-            SizedBox(
+            const SizedBox(
               height: 100,
             ),
             Image.asset("assets/images/giphy.gif", width: 300, height: 300),
