@@ -27,7 +27,7 @@ class NewsAPI {
 class Articles {
   Articles({
     required this.source,
-    this.author,
+    required this.author,
     required this.title,
     required this.description,
     required this.url,
@@ -46,7 +46,7 @@ class Articles {
 
   Articles.fromJson(Map<String, dynamic> json) {
     source = Source.fromJson(json['source']);
-    author = null;
+    author = json['author'];
     title = json['title'];
     description = json['description'];
     url = json['url'];
@@ -71,14 +71,14 @@ class Articles {
 
 class Source {
   Source({
-    this.id,
+    required this.id,
     required this.name,
   });
   late final String? id;
   late final String name;
 
   Source.fromJson(Map<String, dynamic> json) {
-    id = null;
+    id = json['id'];
     name = json['name'];
   }
 
