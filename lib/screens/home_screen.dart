@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 icon: Icon(Icons.search)),
           ],
         ),
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.white,
         body: Container(
             child: Center(
           child: _widgetOptions.elementAt(_selectedIndex),

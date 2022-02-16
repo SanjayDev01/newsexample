@@ -43,6 +43,7 @@ dependencies:
   flutter_overlay_loader: ^1.0.3
   http: 
   cached_network_image: 
+  url_launcher: ^6.0.20
 
 
 
