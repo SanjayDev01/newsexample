@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:newsexample/screens/news_detail_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class NewsCard extends StatelessWidget {
@@ -20,7 +21,17 @@ class NewsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return NewsDetails(
+            content: content,
+            postUrl: posturl,
+            title: title,
+            description: desc,
+            imgUrl: imgUrl,
+          );
+        }));
+      },
       child: Container(
           margin: EdgeInsets.only(bottom: 24),
           width: MediaQuery.of(context).size.width,
