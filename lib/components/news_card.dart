@@ -61,9 +61,7 @@ class NewsCard extends StatelessWidget {
                       Positioned(
                           right: 0,
                           child: IconButton(
-                            onPressed: () {
-                              _launchURL(posturl);
-                            },
+                            onPressed: () {},
                             icon: Icon(
                               Icons.bookmark_add_outlined,
                               color: Colors.redAccent,

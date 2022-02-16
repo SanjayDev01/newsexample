@@ -10,6 +10,8 @@ class BookmarkScreen extends StatefulWidget {
 class _BookmarkScreenState extends State<BookmarkScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text('Bookmark'),
+    );
   }
 }

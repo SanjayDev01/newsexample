@@ -24,7 +24,7 @@ class _SearchScreenState extends State<SearchScreen> {
   List<Articles> articlesList = [];
   List<Articles> articlesList1 = [];
 
-  String searchText = "b";
+  String searchText = "a";
   bool isLoad = false;
   bool isRefresh = false;
 
@@ -43,7 +43,7 @@ class _SearchScreenState extends State<SearchScreen> {
     if (isRefresh) {
       setState(() {
         newsPage = 1;
-        searchText = "b";
+        searchText = "a";
         isLoad = false;
         articlesList.clear();
         articlesList1.clear();
@@ -53,7 +53,7 @@ class _SearchScreenState extends State<SearchScreen> {
       EasyLoading.show(status: 'loading...');
 
       Uri uri = Uri.parse(
-          "https://newsapi.org/v2/everything?q=$searchText&searchIn=title&pageSize=20&page=$newsPage&apiKey=22f9faf06b114d9f951527a89f75dca4");
+          "https://newsapi.org/v2/everything?q=$searchText&searchIn=title&pageSize=20&page=$newsPage&apiKey=bc98639f05e548859be86cc53f1b2e9f");
       var response = await http.get(uri);
       if (response.body != null) {
         var newsArticles = NewsAPI.fromJson(json.decode(response.body));
