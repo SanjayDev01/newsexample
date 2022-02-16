@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    // startTimeout();
+    startTimeout();
   }
 
   handleTimeout() {
@@ -63,11 +63,17 @@ class _SplashScreenState extends State<SplashScreen> {
             const SizedBox(
               height: 5.0,
             ),
-            const Text("using newsapi.org",
-                style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.white30)),
+            const Text(
+              "using newsapi.org",
+              style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.normal,
+                  color: Colors.white30),
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            Image.asset("assets/images/giphy.gif", width: 300, height: 300),
           ],
         )),
       ),
